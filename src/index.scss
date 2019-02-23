@@ -11,7 +11,6 @@ $button-text-color: #fff;
   color: $text;
   font-family: 'Dosis', 'Lato', sans-serif;
   font-weight: 200;
-
   display: flex;
   width: 100%;
   justify-content: center;
@@ -50,26 +49,13 @@ a {
     align-items: center;
     align-self: center;
     padding: 15px;
-    //border-top-width: 500px;
   }
-
-  //&_theme-white {
-  //  background-color: rgb(198, 206, 213);
-  //  color: #110d0f;
-  //
-  //  & img:hover {
-  //    box-shadow: 0 0 2px 2px rgb(17, 13, 15);
-  //  }
-  //
-  //  &:last-child {
-  //    border-top: #110d0f solid 1px;
-  //  }
-  //}
 
   &__content {
     letter-spacing: 2px;
     text-align: center;
     width: 100%;
+    height: 100%;
     align-self: center;
     display: flex;
     align-items: center;
@@ -153,6 +139,10 @@ a {
       box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
     }
   }
+}
+
+.success {
+  display: none;
 }
 
 body {
