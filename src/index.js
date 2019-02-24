@@ -24,6 +24,27 @@ emailButton.addEventListener('click', (e) => {
         }
 
     }, (error) => {
-        console.log('ERROR: ' ,error);
+        console.log('ERROR: ', error);
     })
 });
+
+const contents = document.getElementsByClassName('section__content');
+
+window.addEventListener('scroll', () => {
+    [...contents].forEach((item) => {
+        if (isPartiallyVisible(item) && !item.classList.contains('non-visible')) {
+            item.classList.remove('hidden');
+            item.classList.add('animated-block');
+        }
+    });
+});
+
+function isPartiallyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
+
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+    var height = elementBoundary.height;
+
+    return ((top + 0.35 * height >= 0) && (0.35 * height + window.innerHeight >= bottom));
+}
