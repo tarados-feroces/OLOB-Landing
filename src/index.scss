@@ -54,24 +54,32 @@ a {
   &_container {
     width: 90%;
     display: flex;
-    flex-grow: 1;
-    font-size: 38px;
+
     align-items: center;
     align-self: center;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
     font-size: 2vw;
   }
 
   &__content {
     letter-spacing: 2px;
     text-align: center;
+    //max-width: 50vw;
+    flex-grow: 1;
     width: 100%;
-    height: 100%;
+    //height: 100%;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: fadeOut 1s ease-in;
     flex-direction: column;
+    @media (max-width: 900px) {
+      flex-basis: auto;
+    }
 
     &-title {
       display: flex;
