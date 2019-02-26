@@ -48,3 +48,12 @@ function isPartiallyVisible(el) {
 
     return ((top + 0.35 * height >= 0) && (0.35 * height + window.innerHeight >= bottom));
 }
+
+window.addEventListener('load', () => {
+    [...contents].forEach((item) => {
+        if (isPartiallyVisible(item) && !item.classList.contains('non-visible')) {
+            item.classList.remove('hidden');
+            item.classList.add('animated-block');
+        }
+    });
+})

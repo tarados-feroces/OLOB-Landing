@@ -3,7 +3,7 @@ $background:black;
 $text: #9c9c9c;
 $input-bg-color: #fff;
 $input-text-color: #a3a3a3;
-$button-bg-color: #7f8ff4;
+$button-bg-color: #3ba7ee;
 $button-text-color: #fff;
 
 body {
@@ -33,7 +33,7 @@ a {
 
 .section {
   width: 90vw;
-  height: 500px;
+  height: 60vh;
   display: flex;
   justify-content: center;
   color: #f0f8ff;
@@ -43,10 +43,10 @@ a {
   &_title {
     align-self: center;
     font-size: 100px;
+
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 14px;
-    animation: fadeOut 3s ease-in;
     height: 30vh;
     text-shadow: rgb(68, 154, 252) 0px 0px 10px;
   }
@@ -58,19 +58,19 @@ a {
     font-size: 38px;
     align-items: center;
     align-self: center;
+    font-size: 2vw;
   }
 
   &__content {
     letter-spacing: 2px;
     text-align: center;
-    max-width: 50vw;
     width: 100%;
     height: 100%;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: fadeOut 3s ease-in;
+    animation: fadeOut 1s ease-in;
     flex-direction: column;
 
     &-title {
@@ -80,7 +80,7 @@ a {
       text-align: center;
       align-items: center;
       justify-content: center;
-      font-size: 50px;
+      font-size: 3vw;
       width: 100%;
       height: 30%;
       text-shadow: rgb(48, 140, 245) 0px 0px 10px;
@@ -99,7 +99,6 @@ a {
       text-align: center;
       vertical-align: center;
       margin: 8%;
-      font-size: 30px;
       width: 100%;
     }
   }
@@ -111,12 +110,14 @@ a {
     &_main {
       overflow: hidden;
       margin: 0;
-      width: 90%;
+      border: 1px aliceblue solid;
+      width: 80%;
+      max-width: 2000px;
       & img {
         display:block;
       }
       box-sizing: border-box;
-      z-index: 999;
+
     }
 
   }
@@ -130,13 +131,14 @@ a {
   justify-content: center;
   align-self: center;
   text-align: center;
-  font-size: 35px;
+  font-size: 2vw;
 
   &__field {
     margin-top: 30px;
     align-self: center;
-    height: 30px;
+    height: 25px;
     width: 50%;
+    max-width: 500px;
     background: #fff;
     color: $input-text-color;
     font: inherit;
@@ -150,6 +152,7 @@ a {
 .btn {
   display: flex;
   width: 30%;
+  max-width: 300px;
   align-self: center;
   background: transparent;
   color: inherit;
@@ -252,7 +255,7 @@ body {
   &__content {
     align-self: center;
     margin: 0;
-    font-size: 20px;
+    font-size: 1vw;
     width: 50%;
     text-align: center;
     padding-bottom: 10px;
