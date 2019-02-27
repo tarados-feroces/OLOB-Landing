@@ -119,9 +119,9 @@ a {
     animation: fadeOut 1s ease-in;
     flex-direction: column;
 
-    // &_only-text {
-    //   padding: 100px 0;
-    // }
+     &_only-text {
+       padding-top: 100px;
+     }
 
     &-title {
       display: flex;
@@ -166,8 +166,8 @@ a {
     &_main {
       overflow: hidden;
       border: 1px aliceblue solid;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
       max-width: 2000px;
       margin-bottom: 100px;
       & img {
