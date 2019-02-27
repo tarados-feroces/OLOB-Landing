@@ -2,38 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OnLine On Board</title>
+    <title>On Line On Board</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div id="root" class="root">
 
         <div class="section section_title">
-            <div class="section__content non-visible">On Line On Board</div>
+            <div class="section__content visible">On Line On Board</div>
         </div>
 
         <div class="section section_container">
-            <div class="section__content non-visible">
-                <img class="section__image_main" src="./static/board.png">
+            <div class="section__content section__content_only-text visible">
+                Мы представляем наш новый продукт - шахматную смарт-доску
+                для игры в реальные шахматы по сети!
             </div>
         </div>
 
         <div class="section section_container">
-            <div class="section__content section__content_only-text hidden">Мы представляем Вам наш новый продукт - шахматную смарт-доску
-                для игры в реальные шахматы по сети!</div>
+            <div class="section__content visible">
+                <img class="section__image_main" src="./static/board.png">
+            </div>
         </div>
 
         <div class="section section_container" style="border-top: aliceblue solid 1px">
             <div class="section__content section__content_white hidden">
                 <div class="section__content-title">Интерактивность</div>
                 <div class="section__content-text-content">
-                    <div class="section__content-text">Доска интуитивно понятна! Вы сразу поймете, что происходит на поле,
-                        благодаря системе умной подсветки.
+                    <div class="section__content-text">
+                        Доска подсвечивает ходы игроков и критические ситуации партии,
+                        а в режиме разбора или обучения - лучшие ходы!
                     </div>
                 </div>
             </div>
             <div class="section__content section__content_white hidden">
-                <img class="section__image" src="./static/check.png">
+                <img class="section__image" src="./static/online.png">
             </div>
         </div>
 
@@ -48,7 +51,7 @@
                 </div>
             </div>
             <div class="section__content hidden">
-                <img class="section__image" src="./static/online.png">
+                <img class="section__image" src="./static/check.png">
             </div>
         </div>
 
@@ -58,7 +61,8 @@
                         <div class="section__content-text-content">
                                 <div class="section__content-text">
                                     Нашу доску можно легко взять с собой!
-                                    Ее можно сложить привычным всем образом!
+                                    Все, что нужно для комфортной игры - это подключить ее по bluetooth к своему смартфону
+                                    или по USB к ПК!
                                 </div>
                         </div>
                     </div>
@@ -68,7 +72,7 @@
         </div>
 
         <div id="email" class="section section_container" style="border-top: aliceblue solid 1px">
-            <div class="section__content non-visible">
+            <div class="section__content visible">
                 <form class="form">
                     <div class="form__title">Оставь свой E-mail. Мы напишем, когда продукт будет готов, а ты получишь скидку 15%!</div>
                     <input id="email_value" type="email" class="form__field" placeholder="E-mail" />
@@ -82,7 +86,7 @@
         </div>
 
         <div id="success" class="section section_container success" style="border-top: aliceblue solid 1px">
-            <div class="section__content non-visible">Спасибо!</div>
+            <div class="section__content visible">Спасибо!</div>
         </div>
 
         <div class="section section_container footer">

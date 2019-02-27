@@ -32,7 +32,7 @@ const contents = document.getElementsByClassName('section__content');
 
 window.addEventListener('scroll', () => {
     [...contents].forEach((item) => {
-        if (isPartiallyVisible(item) && !item.classList.contains('non-visible')) {
+        if (isPartiallyVisible(item) && !item.classList.contains('visible')) {
             item.classList.remove('hidden');
             item.classList.add('animated-block');
         }
@@ -51,7 +51,7 @@ function isPartiallyVisible(el) {
 
 window.addEventListener('load', () => {
     [...contents].forEach((item) => {
-        if (isPartiallyVisible(item) && !item.classList.contains('non-visible')) {
+        if (isPartiallyVisible(item) && !item.classList.contains('visible')) {
             item.classList.remove('hidden');
             item.classList.add('animated-block');
         }
