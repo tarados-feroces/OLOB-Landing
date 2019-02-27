@@ -40,11 +40,21 @@ a {
 
   &:nth-child(2) {
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+    @media (max-width: 1000px) {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      height: auto;
+    }
   }
 
   &:nth-child(3) {
-    height: 100vh;
+    height: 90vh;
+    @media (max-width: 1000px) {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      height: auto;
+    }
   }
 
   @media (max-width: 1000px) {
