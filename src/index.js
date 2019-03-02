@@ -1,31 +1,45 @@
 import './index.scss'
 
-const BACKEND = 'http://localhost:5000/email';
+const BACKEND = 'http://130.193.34.42/email';
 const emailButton = document.getElementById('email_submit');
+const emailField = document.querySelector('.form__field');
+
+const isEmailValid = (email) => {
+    return /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(email);
+};
+
+emailField.addEventListener('focus', () => {
+    emailField.style.color = '#5D5D5D';
+});
 
 emailButton.addEventListener('click', (e) => {
     e.preventDefault();
     const data = document.getElementById('email_value').value;
-    console.log(data);
-    fetch(BACKEND, {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify({email: data})
-    }).then((res) => {
-        console.log(res);
-        if (res.ok) {
-            document.getElementById('email').style.display = 'none';
-            document.getElementById('success').style.display = 'block';
-            console.log('success');
-        }
+    if (!isEmailValid(data)) {
+        emailField.style["boxShadow"] = '0 6px 10px 0 rgba(0, 0, 0 , .1)';
+        emailField.style.color = 'red';
+        console.log('error email')
+    } else {
+        fetch(BACKEND, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify({email: data})
+        }).then((res) => {
+            if (res.ok) {
+                document.getElementById('email').style.display = 'none';
+                document.getElementById('success').style.display = 'block';
+                console.log('Красавчик!');
+            }
 
-    }, (error) => {
-        console.log('ERROR: ', error);
-    })
+        }, (error) => {
+            console.log('ERROR: ', error);
+        })
+    }
+
 });
 
 const contents = document.getElementsByClassName('section__content');
@@ -56,4 +70,4 @@ window.addEventListener('load', () => {
             item.classList.add('animated-block');
         }
     });
-})
+});

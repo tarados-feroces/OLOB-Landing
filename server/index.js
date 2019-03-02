@@ -16,7 +16,7 @@ app.listen(process.env.PORT || 5000, () => console.log('Example app listening on
 
 var counter = 0;
 
-app.use('/email/', function (req, res) {
+app.use('/email', function (req, res) {
     const email = req.body.email;
     let status = 200;
     try {

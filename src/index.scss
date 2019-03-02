@@ -2,7 +2,7 @@
 $background:black;
 $text: #9c9c9c;
 $input-bg-color: #fff;
-$input-text-color: #a3a3a3;
+$input-text-color: #5d5d5d;
 $button-bg-color: #3ba7ee;
 $button-text-color: #fff;
 
@@ -40,7 +40,6 @@ a {
 
   &:nth-child(2) {
     height: auto;
-    margin-bottom: 150px;
     @media (max-width: 1000px) {
       padding-top: 30px;
       padding-bottom: 40px;
@@ -48,7 +47,7 @@ a {
     }
   }
 
-  &:nth-child(3) {
+  &:nth-child(4) {
     height: 90vh;
     @media (max-width: 1000px) {
       padding-top: 30px;
@@ -121,7 +120,15 @@ a {
 
      &_only-text {
        padding-top: 100px;
+       font-size: 3vw;
+       @media (max-width: 1000px) {
+         font-size: 3vh;
+       }
      }
+
+    &_only-text-small {
+
+    }
 
     &-title {
       display: flex;
